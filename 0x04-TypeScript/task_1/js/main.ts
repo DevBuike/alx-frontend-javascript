@@ -45,4 +45,33 @@ const printTeacher: printTeacherFunction = (firstName, lastName) => {
   return `${firstName.charAt(0)}. ${lastName}`;
 };
 
-console.log(printTeacher("John", "Doe"));
+
+// Describes the constructor for StudentClass
+
+interface StudentConstructor {
+  new (firstName: string, lastName: string): StudentClassInterface;
+}
+
+// Describes the public methods of StudentClass
+interface StudentClassInterface {
+  workOnHomework(): string;
+  displayName(): string;
+};
+
+class StudentClass implements StudentClassInterface {
+  private firstName: string;
+  private lastName: string;
+
+  constructor(firstName: string, lastName: string) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+  };
+
+  workOnHomework(): string {
+    return "Currently working";
+  }
+
+  displayName(): string {
+    return this.firstName;
+  }
+};
