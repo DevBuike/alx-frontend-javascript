@@ -21,13 +21,18 @@ module.exports = {
     extensions: [".tsx", ".ts", ".js"]
   },
   devServer: {
-    contentBase: "./dist"
+    // contentBase: "./dist",
+    static: {
+    directory: path.join(__dirname, "dist"),
+    },
+  hot: true,
   },
   plugins: [
     new ForkTsCheckerWebpackPlugin(),
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      title: "Development"
+      title: "Development",
+      template: './js/index.html',
     })
   ],
   output: {
