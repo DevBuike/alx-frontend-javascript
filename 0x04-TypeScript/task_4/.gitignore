@@ -1,0 +1,35 @@
+# Ignore all `.log` files
+*.log
+
+# Ignore the `node_modules` folder
+node_modules/
+
+# Ignore OS-generated files
+.DS_Store
+
+# Ignore environment variable files
+.env
+# Ignore build artifacts
+dist/
+# Ignore TypeScript declaration files
+*.d.ts
+# Ignore coverage reports
+coverage/
+# Ignore test files
+*.test.ts
+# Ignore IDE-specific files
+.idea/
+# Ignore temporary files
+*.tmp
+# Ignore local configuration files
+*.local
+# Ignore build artifacts
+build/
+# Ignore package lock files
+package-lock.json
+# Ignore yarn lock files
+yarn.lock
+# Ignore npm debug logs
+npm-debug.log*
+# Ignore temporary files created by editors
+*.swp
